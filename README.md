@@ -2,7 +2,7 @@ Occupancy Grid Mapping 占用栅格地图构建算法实现《概率机器人》
 
 
 
-详细介绍请参考：
+详细介绍请参考：https://zhuanlan.zhihu.com/p/42995269
 
 
 数据集下载地址：https://pan.baidu.com/s/1j_SSEtaq7D0XwaED0Jg4Ew
