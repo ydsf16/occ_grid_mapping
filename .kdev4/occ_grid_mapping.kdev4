@@ -1,0 +1,20 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00 \x00o\x00c\x00c\x00_\x00g\x00r\x00i\x00d\x00_\x00m\x00a\x00p\x00p\x00i\x00n\x00g)
+
+[CMake]
+Build Directory Count=1
+Current Build Directory Index=0
+ProjectRootRelative=
+
+[CMake][CMake Build Directory 0]
+Build Directory Path=file:///home/yds/catkin_ws/build/occ_grid_mapping
+Build Type=Release
+CMake Binary=file:///usr/bin/cmake
+Environment Profile=
+Extra Arguments=-DCATKIN_DEVEL_PREFIX=../../devel -DCMAKE_INSTALL_PREFIX=../../install
+Install Directory=file:///home/yds/catkin_ws/install
+
+[Defines And Includes][Compiler]
+Name=GCC
+Path=gcc
+Type=GCC

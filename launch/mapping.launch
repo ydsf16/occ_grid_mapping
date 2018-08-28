@@ -1,0 +1,15 @@
+<launch>
+
+  <node pkg="occ_grid_mapping" type="odometry" name="odometry" output="screen" clear_params="true">
+						<rosparam file="$(find occ_grid_mapping)/config/default.yaml" command="load" />
+  </node>
+
+  <node pkg="occ_grid_mapping" type="mapping" name="mapping" output="screen" clear_params="true">
+						<rosparam file="$(find occ_grid_mapping)/config/default.yaml" command="load" />
+  </node>
+  
+	<node pkg="rviz" type="rviz" name="rviz" output="screen" 
+      args="-d $(find occ_grid_mapping)/rviz/default.rviz" required="true">
+    </node>
+
+</launch>

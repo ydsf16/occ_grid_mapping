@@ -1,0 +1,26 @@
+
+map_image_save_dir: /home/yds/map.png
+map_config_save_dir: /home/yds/map.yaml
+
+map:
+  sizex: 1000
+  sizey: 1000
+  initx: 500
+  inity: 500
+  cell_size: 0.05
+  frame_id: odom
+  
+robot_laser:
+  x: 0.26
+  y: 0.0
+  theta: 0.0
+
+sensor_model:
+  P_occ: 0.6
+  P_free: 0.4
+  P_prior: 0.5
+  
+robot:
+  kl: 2.31249273072714e-06
+  kr: 2.30439760302837e-06
+  b: 0.719561485930414
