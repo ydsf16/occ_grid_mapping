@@ -1,6 +1,4 @@
-Occupancy Grid Mapping 占用栅格地图构建算法实现《概率机器人》第9章
-
-
+## Occupancy Grid Mapping 占用栅格地图构建算法实现《概率机器人》第9章
 
 详细介绍请参考：https://zhuanlan.zhihu.com/p/42995269
 
@@ -8,7 +6,7 @@ Occupancy Grid Mapping 占用栅格地图构建算法实现《概率机器人》
 数据集下载地址：https://pan.baidu.com/s/1j_SSEtaq7D0XwaED0Jg4Ew
 
 
-使用方法：
+## 使用方法
 
 step1. 下载到自己的catkin_ws/src
 
