@@ -46,22 +46,22 @@ bool GridMap::setGridBel ( const double& x, const double& y, const double& bel )
     return true;
 }
 
-bool GridMap::getGridLogBel ( const double& x, const double& y, double& log_bel )
-{
-    double bel;
-    if(!getGridBel(x, y, bel))
-        return false;
-    log_bel = log( bel / (1.0-bel));
-    return true;
-}
+// bool GridMap::getGridLogBel ( const double& x, const double& y, double& log_bel )
+// {
+//     double bel;
+//     if(!getGridBel(x, y, bel))
+//         return false;
+//     log_bel = log( bel / (1.0-bel));
+//     return true;
+// }
 
-bool GridMap::setGridLogBel ( const double& x, const double& y, const double& log_bel )
-{
-    double bel = 1.0 - 1.0 / (1 + exp(log_bel));
-    if( !setGridBel(x, y, bel) )
-        return false;
-    return true;
-}
+// bool GridMap::setGridLogBel ( const double& x, const double& y, const double& log_bel )
+// {
+//     double bel = 1.0 - 1.0 / (1 + exp(log_bel));
+//     if( !setGridBel(x, y, bel) )
+//         return false;
+//     return true;
+// }
 
 double GridMap::getCellSize()
 {

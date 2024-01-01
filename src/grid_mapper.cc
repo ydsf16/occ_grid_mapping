@@ -57,14 +57,23 @@ void GridMapper::updateMap ( const sensor_msgs::LaserScanConstPtr& scan,  Pose2d
     }// for each beam
 }
 
-void GridMapper::updateGrid ( const Eigen::Vector2d& grid, const double& pmzx )
-{
-    /* TODO 这个过程写的太低效了 */
-    double log_bel;
-    if(  ! map_->getGridLogBel( grid(0), grid(1), log_bel )  ) //获取log的bel
+// void GridMapper::updateGrid ( const Eigen::Vector2d& grid, const double& pmzx )
+// {
+//     /* TODO 这个过程写的太低效了 */
+//     double log_bel;
+//     if(  ! map_->getGridLogBel( grid(0), grid(1), log_bel )  ) //获取log的bel
+//         return;
+//     log_bel += log( pmzx / (1.0 - pmzx) ); //更新
+//     map_->setGridLogBel( grid(0), grid(1), log_bel  ); //设置回地图
+// }
+
+void GridMapper::updateGrid(const Eigen::Vector2d& grid, const double& pmzx){
+    double bel;
+    if(! map_->getGridBel(grid(0), grid(1), bel) )
         return;
-    log_bel += log( pmzx / (1.0 - pmzx) ); //更新
-    map_->setGridLogBel( grid(0), grid(1), log_bel  ); //设置回地图
+    double odds = pmzx * bel / ((1.0 - pmzx) *(1.0 - bel));
+    double updated_bel = 1.0 - 1.0 / (1.0 + odds);
+    map_->setGridBel(grid(0), grid(1), updated_bel);//设置回地图
 }
 
 double GridMapper::laserInvModel ( const double& r, const double& R, const double& cell_size )
